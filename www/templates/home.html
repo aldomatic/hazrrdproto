@@ -1,0 +1,19 @@
+<ion-view view-title="Profile">
+  <ion-content scroll="false" padding="true">
+
+    <div class="list">
+        <div class="item item-thumbnail-left" style="border:none;">
+          <img src="./img/128.jpg">
+          <h2 style="font-size:20px;">Hello, Olivia</h2>
+          <p>Member since 2014</p>
+        </div>
+    </div>
+
+     <h4>What is your issue...</h4>
+    <ion-list>
+      <ion-item ng-repeat="service in services" href="#/app/results">
+        {{service.issue}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

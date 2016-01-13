@@ -1,0 +1,29 @@
+<ion-view view-title="Hazrrd">
+  <ion-content scroll="false">
+
+    <div class="map-panel" id="options-menu" ng-show="showOptionsMenu">
+		<a href="#" ng-click="getNearbySam()" class="button button-full button-assertive">Flat</a>
+		<a href="#" ng-click="getNearbySam()" class="button button-full button-assertive">Gas</a>
+		<a href="#" ng-click="getNearbySam()" class="button button-full button-assertive">Jump</a>
+		<a href="#" ng-click="getNearbySam()" class="button button-full button-assertive">Tow</a>
+    </div>
+    <div class="map-panel-details" id="map-details" ng-show="showMapDetails">
+    <p>
+    	Request: <strong>Gas</strong>
+    </p>
+    <p>
+    	<img src="./img/73.jpg" />
+    </p>
+    <p>
+    	<strong>{{allNearbySamaritnsResults[0].name}}</strong><br />
+    	<span class="sam-vehicle">{{allNearbySamaritnsResults[0].vehicle}}</span>
+    </p>
+    	<ion-list>
+		  <ion-item>
+		    {{traveldetails.duration.text}} away
+		  </ion-item>
+		</ion-list>
+    </div>
+     <div id="map" data-tap-disabled="true"></div>
+  </ion-content>
+</ion-view>

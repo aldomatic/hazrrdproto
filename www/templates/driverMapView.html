@@ -1,0 +1,21 @@
+<ion-view view-title="Driver View">
+  <ion-content scroll="false">
+  <div class="map-panel-details" id="driver-panel" style="width:120px;">
+    <p>
+        <img src="./img/73.jpg" />
+    </p>
+    <p>
+        Driver Mode<br />
+        <a href="#" class="button button-full button-calm" ng-hide="driverMode" ng-click="setDriverMode($event)">OFF</a>
+        <a href="#" class="button button-full button-calm" ng-show="driverMode" ng-click="setDriverMode($event)">ON</a>
+    </p>
+    <p style="font-size:12px;margin: 0;">
+      Lat: {{assistantGeoData.lat.toFixed(4)}}
+    </p>
+     <p style="font-size:12px;margin: 0;">
+      Lng: {{assistantGeoData.lng.toFixed(4)}}
+    </p>
+  </div>
+     <div id="driverMap" data-tap-disabled="true"></div>
+  </ion-content>
+</ion-view>

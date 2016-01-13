@@ -1,0 +1,27 @@
+<ion-view view-title="Nearby Sams">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="sam in results" class="item-thumbnail-left item-text-wrap">
+         <img ng-src="img/128.jpg">
+        <h2 class="sam-results-name">{{sam.name}}</h2>
+        <p>
+          <strong>Distance:</strong> <span style="background-color:#FFFFD2;">{{sam.distance}}</span>
+        </p>
+        <p>
+          <strong>Vehicle:</strong> {{sam.vehicle}}
+        </p>
+          <!-- <p>
+           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+          </p> -->
+          <p>
+            <strong>Services:</strong>
+            <ul class="sam-ul">
+              <li ng-repeat="issue in sam.willing">{{issue}}</li>
+            </ul>
+          </p>
+
+          <a href="#/app/map" class="button button-block button-assertive">Request {{sam.name}}</a>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
